@@ -41,7 +41,7 @@ def get_uniprotkbid(gene_name: str, taxonomy_id: int = 9606, reviewed: bool = Tr
     reviewed = " AND (reviewed:true)" if reviewed else ""
 
     # Run a search query for a protein
-    response = get_url(f"{website}/search?query=(gene:{gene_name}) AND (taxonomy_id:{taxonomy_id}){reviewed}&fields=id,gene_names&size=100")
+    response = get_url(f"{website}/search?query=(gene:{gene_name}) AND (taxonomy_id:{taxonomy_id}){reviewed}&fields=id&size=100")
 
     # # Store the protein names
     protein_names = [entry["uniProtkbId"] for entry in response.json()["results"]]
