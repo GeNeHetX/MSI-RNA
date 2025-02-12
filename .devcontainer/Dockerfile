@@ -25,4 +25,5 @@ USER $USERNAME
 
 # Copy requirements.txt and install dependencies
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --upgrade --no-cache-dir -r requirements.txt
