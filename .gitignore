@@ -4,6 +4,10 @@ data_hdd/
 data_external/
 qp-projects/
 
+# Tables
+*.csv
+*.tsv
+
 # M2AIA
 core
 
